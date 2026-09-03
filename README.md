@@ -2,14 +2,17 @@
 
 <div align="center">
 
-![SIMC Web Banner](https://img.shields.io/badge/SIMC-Web_Platform_v2.5-00F2FE?style=for-the-badge&logo=google-chrome&logoColor=black)
-![PHP](https://img.shields.io/badge/PHP-8.0%20%7C%208.1%20%7C%208.2-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-10.4+-003545?style=for-the-badge&logo=mariadb&logoColor=white)
-![JavaScript](https://img.shields.io/badge/Vanilla_JS-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Android](https://img.shields.io/badge/Android-APK_Ready-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Producci%C3%B3n-success?style=for-the-badge)
+[![PHP Version](https://img.shields.io/badge/PHP-8.0%20%7C%208.1%20%7C%208.2-777BB4?style=flat-square&logo=php&logoColor=white)](https://www.php.net/)
+[![Database](https://img.shields.io/badge/MariaDB-10.4+-003545?style=flat-square&logo=mariadb&logoColor=white)](https://mariadb.org/)
+[![JavaScript](https://img.shields.io/badge/Vanilla_JS-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![Android](https://img.shields.io/badge/Android-APK_Disponibles-3DDC84?style=flat-square&logo=android&logoColor=white)](#-distribución-de-aplicaciones-móviles)
+[![Status](https://img.shields.io/badge/Estado-Producción-00F2FE?style=flat-square)](#)
+
+<br>
 
 **Portal Central Oficial, Pasarela de Licenciamiento, Centro de Descargas y Panel Administrativo RBAC**
+
+<br>
 
 [Características](#-características-principales) •
 [Arquitectura](#-arquitectura-del-sistema) •
@@ -58,26 +61,26 @@ Esta plataforma centraliza:
 
 ```mermaid
 graph TD
-    Client[Navegadores Web / Celulares / Tablets] -->|HTTPS| Apache[Apache Web Server / .htaccess]
-    DesktopApps[SIMC Supervisor / Agente Desktop] -->|REST API JSON| Apache
-    MobileApps[SIMC Android Apps .APK] -->|REST API JSON| Apache
+    Client["Navegadores Web / Celulares / Tablets"] -->|HTTPS| Apache["Apache Web Server / .htaccess"]
+    DesktopApps["SIMC Supervisor / Agente Desktop"] -->|REST API JSON| Apache
+    MobileApps["SIMC Android Apps .APK"] -->|REST API JSON| Apache
     
-    subgraph "Capa Web SIMC"
-        Apache --> Index[index.php (Landing Page)]
-        Apache --> Admin[admin/dashboard.php (Admin Suite)]
-        Apache --> APIs[php/*.php (Endpoints API REST)]
+    subgraph CapaWeb["Capa Web SIMC"]
+        Apache --> Index["index.php - Landing Page"]
+        Apache --> Admin["admin/dashboard.php - Admin Suite"]
+        Apache --> APIs["php/*.php - Endpoints API REST"]
         
-        Index --> Partials[php/partials/ (Componentes UI)]
-        Admin --> AdminViews[admin/views/ (Módulos)]
-        Admin --> AdminData[admin/php/data.php]
+        Index --> Partials["php/partials/ - Componentes UI"]
+        Admin --> AdminViews["admin/views/ - Modulos"]
+        Admin --> AdminData["admin/php/data.php"]
         
-        APIs --> DBConn[php/conexion.php (PDO Singleton)]
+        APIs --> DBConn["php/conexion.php - PDO Singleton"]
         AdminData --> DBConn
         Index --> DBConn
     end
 
-    subgraph "Persistencia de Datos"
-        DBConn --> MySQL[(MySQL / MariaDB: simc_db)]
+    subgraph Persistencia["Persistencia de Datos"]
+        DBConn --> MySQL[("MySQL / MariaDB: simc_db")]
     end
 ```
 
@@ -91,8 +94,7 @@ SIMC_Web/
 ├── .gitignore                # Reglas de exclusión de seguridad y ejecutables
 ├── .htaccess                 # Directivas Apache, mod_rewrite y compresión Gzip
 ├── index.php                 # Enrutador y renderizador del Portal Oficial
-├── MANUAL_PROGRAMADOR_SIMC.md # Documentación técnica exhaustiva del sistema
-├── MANUAL_PROGRAMADOR_SIMC.pdf # Versión imprimible del manual técnico
+├── generar_pdf.py            # Utilidad complementaria
 ├── admin/                    # SIMC Admin Suite (Panel Administrativo)
 │   ├── dashboard.php         # Controlador principal del panel
 │   ├── css/                  # Hojas de estilo del dashboard
@@ -120,9 +122,9 @@ SIMC_Web/
 │   ├── contact.js            # Enrutamiento de tickets de contacto
 │   └── main.js               # Control de modales, menús y scroll reveal
 ├── pages/                    # Páginas institucionales complementarias
-│   ├── docs.php              # Documentación para usuarios
-│   ├── privacypolicy.php     # Términos legales y política de privacidad
-│   └── terms.php             # Condiciones de servicio
+│   ├── cookies.php           # Política de cookies
+│   ├── privacidad.php        # Términos legales y política de privacidad
+│   └── terminos.php          # Condiciones de servicio
 └── php/                      # Backend funcional y endpoints REST
     ├── conexion.php          # Conexión PDO Singleton + Clases de Seguridad
     ├── api_auth.php          # Endpoint REST de validación para apps
