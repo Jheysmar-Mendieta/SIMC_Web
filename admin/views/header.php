@@ -6,7 +6,6 @@ if (!defined('SIMC_ADMIN_INIT')) {
 <!-- Barra móvil superior -->
 <header class="mobile-admin-bar">
   <a href="dashboard.php" class="sidebar-brand">
-    <img src="../img/logo.png" alt="Logo SIMC" style="width:24px;height:24px;border-radius:6px;margin-right:6px;filter:drop-shadow(0 0 6px rgba(0,242,254,0.5));" />
     <div class="sidebar-logo"><span>[</span>SIMC<span>]</span></div>
     <span class="suite-badge">ADMIN</span>
   </a>
@@ -32,7 +31,6 @@ if (!defined('SIMC_ADMIN_INIT')) {
 <aside class="sidebar" id="adminSidebar">
   <div style="display:flex; align-items:center; justify-content:space-between; width:100%;">
     <a href="dashboard.php" class="sidebar-brand">
-      <img src="../img/logo.png" alt="Logo SIMC" style="width:28px;height:28px;border-radius:6px;margin-right:8px;filter:drop-shadow(0 0 8px rgba(0,242,254,0.5));" />
       <div class="sidebar-logo"><span>[</span>SIMC<span>]</span></div>
       <span class="suite-badge">ADMIN v2.0</span>
     </a>

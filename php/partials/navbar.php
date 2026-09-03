@@ -7,7 +7,6 @@
   <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-inner">
       <a href="index.php" class="nav-logo" aria-label="Inicio de SIMC">
-        <img src="img/logo.png" alt="Logo SIMC" class="nav-logo-icon" width="28" height="28" />
         <span class="logo-bracket">[</span>SIMC<span class="logo-bracket">]</span>
       </a>
 

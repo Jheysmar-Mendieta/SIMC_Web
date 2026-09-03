@@ -7,7 +7,6 @@
   <div class="footer-inner container">
     <div class="footer-brand">
       <a href="index.php" class="nav-logo" aria-label="SIMC Inicio">
-        <img src="img/logo.png" alt="Logo SIMC" class="nav-logo-icon" width="28" height="28" />
         <span class="logo-bracket">[</span>SIMC<span class="logo-bracket">]</span>
       </a>
       <p>Sistema Inteligente de Monitoreo de Concentración impulsado por Inteligencia Artificial y Visión por Computadora.</p>
