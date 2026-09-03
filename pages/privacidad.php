@@ -19,6 +19,12 @@ $baseUrl = get_base_url();
   <title>Política de Privacidad — SIMC</title>
   <meta name="description" content="Política de Privacidad de SIMC (Sistema Inteligente de Monitoreo de Concentración). Tratamiento ético y no invasivo de datos." />
   
+  <!-- Favicons Oficiales de SIMC -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+
   <link rel="stylesheet" href="../css/main.css?v=<?= filemtime(__DIR__ . '/../css/main.css') ?>"/>
   <link rel="stylesheet" href="../css/legal.css?v=<?= filemtime(__DIR__ . '/../css/legal.css') ?>"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
