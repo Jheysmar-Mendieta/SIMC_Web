@@ -1,0 +1,394 @@
+/* Sección Membresías, Selector y Descargas */
+
+.products {
+  background: var(--bg-base);
+  position: relative;
+}
+
+/* Selector de facturación */
+.pricing-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 46px auto;
+  padding: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  max-width: fit-content;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.pricing-btn:hover { color: var(--text-primary); }
+
+.pricing-btn.active {
+  background: linear-gradient(135deg, var(--cyan), var(--blue-neon));
+  color: var(--text-inverse);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.4);
+  font-weight: 800;
+}
+
+.discount-tag {
+  background: var(--green-ok);
+  color: var(--text-inverse);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  position: relative;
+  padding: 38px 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  transition: var(--transition);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
+}
+
+.product-card.featured {
+  border-color: rgba(0, 242, 254, 0.45);
+  background: linear-gradient(160deg, rgba(0, 242, 254, 0.08), rgba(37, 99, 235, 0.05), var(--bg-card));
+  box-shadow: 0 0 45px rgba(0, 242, 254, 0.15);
+}
+
+.product-card.featured::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, #00f2fe, #2563eb, #8b5cf6, #00f2fe);
+  background-size: 200% 100%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderShimmer 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes borderShimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.card-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  color: var(--cyan);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.badge-featured {
+  background: linear-gradient(90deg, #00f2fe, #2563eb);
+  border: none;
+  color: var(--text-inverse);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(37, 99, 235, 0.1));
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  color: var(--cyan);
+  margin-bottom: 18px;
+}
+
+.product-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.pricing-price-block {
+  display: flex;
+  align-items: baseline;
+  margin: 12px 0 8px 0;
+}
+
+.price-currency {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.price-amount {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--cyan);
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.price-period {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  margin-left: 6px;
+}
+
+.product-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.card-specs {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.card-specs li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.card-specs li strong { color: var(--text-primary); }
+.card-specs li i { color: var(--green-ok); font-size: 0.85rem; margin-top: 3px; }
+
+/* Sección de descargas de instaladores */
+.downloads-section-wrapper {
+  margin-top: 90px;
+  padding-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+.download-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.download-meta-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag-version {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--cyan);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  font-weight: 600;
+}
+
+.tag-size {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.download-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.download-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.btn-download {
+  margin-top: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+
+/* Tabs de selección de plataforma */
+.download-tabs-nav {
+  display: inline-flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 5px;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.dl-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.dl-tab-btn i {
+  font-size: 1.05rem;
+}
+
+.dl-tab-btn:hover {
+  color: var(--cyan);
+}
+
+.dl-tab-btn.active {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.25);
+}
+
+.download-tab-content {
+  display: none;
+  animation: fadeInDl 0.35s ease-out;
+}
+
+.download-tab-content.active {
+  display: grid;
+}
+
+@keyframes fadeInDl {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────── ESTADOS DE PLAN ACTIVO & UPGRADE ─────────────── */
+
+.product-card.active-plan-card {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.25) !important;
+  background: linear-gradient(160deg, rgba(16, 185, 129, 0.08), rgba(6, 78, 59, 0.05), var(--bg-card)) !important;
+}
+
+.badge-active-plan {
+  background: #10b981 !important;
+  color: #030712 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5) !important;
+}
+
+.btn-plan-status {
+  width: 100%;
+  padding: 12px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn-plan-status.active-btn {
+  background: #10b981;
+  border: 1px solid #10b981;
+  color: #030712;
+  cursor: default;
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.35);
+}
+
+.btn-plan-status.included-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.btn-upgrade-action {
+  background: linear-gradient(135deg, #f59e0b, #ec4899);
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.3);
+}
+.btn-upgrade-action:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+}

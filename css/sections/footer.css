@@ -1,0 +1,119 @@
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  padding: 80px 0 0;
+  position: relative;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+  padding-bottom: 60px;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+  line-height: 1.65;
+}
+
+.footer-trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+
+.trust-badge-item i {
+  color: var(--green-ok);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-col h5 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.footer-col a {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover { color: var(--cyan); }
+
+.footer-social-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-social-wrapper h5 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.footer-social-icons a:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(0, 242, 254, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}

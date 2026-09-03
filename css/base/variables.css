@@ -1,0 +1,42 @@
+:root {
+  --bg-base:        #030712;
+  --bg-surface:     #080e24;
+  --bg-card:        #0d1636;
+  --bg-card-hover:  #131f4a;
+  --bg-glass:       rgba(13, 22, 54, 0.85);
+
+  --border:         rgba(0, 242, 254, 0.18);
+  --border-subtle:  rgba(255, 255, 255, 0.08);
+  --border-hover:   rgba(0, 242, 254, 0.6);
+  --border-focus:   #00f2fe;
+
+  --cyan:           #00f2fe;
+  --cyan-dark:      #0099cc;
+  --cyan-glow:      rgba(0, 242, 254, 0.35);
+  --blue-neon:      #2563eb;
+  --indigo:         #4f46e5;
+  --violet:         #8b5cf6;
+  --green-ok:       #10b981;
+  --green-glow:     rgba(16, 185, 129, 0.3);
+  --red-no:         #f43f5e;
+  --red-glow:       rgba(244, 63, 94, 0.35);
+  --amber-warn:     #f59e0b;
+
+  --text-primary:   #f8fafc;
+  --text-muted:     #cbd5e1;
+  --text-dim:       #94a3b8;
+  --text-inverse:   #030712;
+
+  --font-display:   'Orbitron', monospace, sans-serif;
+  --font-body:      'Syne', system-ui, -apple-system, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+
+  --radius-sm:      8px;
+  --radius:         14px;
+  --radius-lg:      20px;
+  --radius-full:    9999px;
+
+  --transition:     0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-glow:    0 0 35px rgba(0, 242, 254, 0.22);
+  --shadow-card:    0 12px 36px rgba(0, 0, 0, 0.65);
+}

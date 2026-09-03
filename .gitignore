@@ -1,0 +1,31 @@
+# ==========================================
+# SIMC WEB — GIT IGNORE CONFIGURATION
+# ==========================================
+
+# Entorno y credenciales de seguridad
+.env
+.env.local
+.env.*.local
+
+# Ejecutables pesados de Windows (GitHub límite 100MB)
+*.exe
+descargas/*.exe
+
+# Archivos de caché y temporales
+*.log
+*.tmp
+*.bak
+*.swp
+manual_temp.html
+
+# Archivos de sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Comprimidos y volcados temporales
+*.zip
+*.tar.gz
+*.rar

@@ -1,0 +1,96 @@
+.compare {
+  background: var(--bg-surface);
+  position: relative;
+}
+
+.compare::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--violet), transparent);
+}
+
+.compare-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 640px;
+  background: var(--bg-card);
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.compare-table thead tr {
+  background: rgba(0, 242, 254, 0.05);
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-table th {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.compare-table tbody tr:hover {
+  background: rgba(0, 242, 254, 0.03);
+}
+
+.compare-table tbody tr:last-child td { border-bottom: none; }
+
+.col-feature {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.94rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.col-feature i {
+  color: var(--cyan);
+  width: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.col-simc {
+  font-weight: 700;
+  color: var(--green-ok);
+  font-size: 0.95rem;
+}
+
+.col-simc i { color: var(--green-ok); margin-right: 6px; }
+.col-trad { color: var(--text-dim); font-size: 0.92rem; }
+.col-trad i { color: var(--red-no); margin-right: 6px; }
+
+.badge-simc {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, var(--cyan), var(--blue-neon));
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text-inverse);
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.3);
+}
