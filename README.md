@@ -3,9 +3,10 @@
 <div align="center">
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.0%20%7C%208.1%20%7C%208.2-777BB4?style=flat-square&logo=php&logoColor=white)](https://www.php.net/)
-[![Database](https://img.shields.io/badge/MariaDB-10.4+-003545?style=flat-square&logo=mariadb&logoColor=white)](https://mariadb.org/)
+[![Database](https://img.shields.io/badge/MySQL%20%7C%20MariaDB-Compatible-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![JavaScript](https://img.shields.io/badge/Vanilla_JS-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![Android](https://img.shields.io/badge/Android-APK_Disponibles-3DDC84?style=flat-square&logo=android&logoColor=white)](#-distribución-de-aplicaciones-móviles)
+[![License: MIT](https://img.shields.io/badge/Licencia-MIT-22c55e.svg?style=flat-square)](LICENSE)
 [![Status](https://img.shields.io/badge/Estado-Producción-00F2FE?style=flat-square)](#)
 
 <br>
@@ -15,6 +16,7 @@
 <br>
 
 [Características](#-características-principales) •
+[Ecosistema](#-ecosistema-simc-módulos-relacionados) •
 [Arquitectura](#-arquitectura-del-sistema) •
 [Estructura](#-estructura-del-repositorio) •
 [Instalación](#-guía-de-instalación-y-despliegue) •
@@ -35,6 +37,18 @@ Esta plataforma centraliza:
 3. **Centro Oficial de Descargas:** Repositorio y distribución de las aplicaciones móviles Android (`.APK`) y de escritorio Windows (`.EXE`).
 4. **API REST de Autenticación:** Endpoints JSON de alta seguridad consumidos por las apps de escritorio y móviles (`SIMC Supervisor` y `SIMC Agente`) para verificar cuentas y cupos en tiempo real.
 5. **SIMC Admin Suite (Panel de Control):** Dashboard administrativo protegido por control de acceso basado en roles (RBAC) con métricas en vivo, gestión de incidentes, usuarios y exportación de datos.
+
+---
+
+## 🌐 Ecosistema SIMC (Módulos Relacionados)
+
+El proyecto **SIMC** está diseñado bajo una arquitectura modular y distribuida, dividida en los siguientes componentes:
+
+| Módulo | Repositorio / Ubicación | Stack Tecnológico | Rol en el Ecosistema |
+| :--- | :--- | :--- | :--- |
+| **SIMC Web** *(Este repo)* | [Jheysmar-Mendieta/SIMC_Web](https://github.com/Jheysmar-Mendieta/SIMC_Web) | PHP 8, MySQL, Vanilla JS, CSS3 | Portal institucional, emisión de licencias, landing page, APIs y panel administrativo. |
+| **SIMC PRO** | [Jheysmar-Mendieta/SIMC_PRO](https://github.com/Jheysmar-Mendieta/SIMC_PRO) | Python, Flask, Socket.IO, YOLOv8 | Servidor de aula en tiempo real, streaming WebRTC, bloqueo de terminales e IA de visión. |
+| **SIMC Mobile (Android)** | Proyecto Android Studio (`MyApplication`) | Kotlin, WebView nativo, Android SDK | Aplicaciones móviles (.APK) para docentes (Supervisor), alumnos (Agente) y modo de estudio (Individual). |
 
 ---
 
@@ -93,6 +107,7 @@ SIMC_Web/
 ├── .env.example              # Plantilla de variables de entorno para producción
 ├── .gitignore                # Reglas de exclusión de seguridad y ejecutables
 ├── .htaccess                 # Directivas Apache, mod_rewrite y compresión Gzip
+├── LICENSE                   # Licencia de código abierto MIT
 ├── index.php                 # Enrutador y renderizador del Portal Oficial
 ├── generar_pdf.py            # Utilidad complementaria
 ├── admin/                    # SIMC Admin Suite (Panel Administrativo)
@@ -140,7 +155,7 @@ SIMC_Web/
 ### 1. Requisitos del Servidor
 - **Servidor Web:** Apache 2.4+ (con módulos `mod_rewrite` y `mod_headers` activos).
 - **PHP:** Versión 8.0 o superior (extensiones: `pdo_mysql`, `openssl`, `json`, `mbstring`).
-- **Base de Datos:** MySQL 8.0+ o MariaDB 10.4+.
+- **Base de Datos:** MySQL 8.0+ o MariaDB 10.4+ (Compatible con XAMPP, LAMP y Docker).
 
 ### 2. Pasos de Instalación (Entorno Local XAMPP)
 
@@ -222,5 +237,6 @@ El sistema almacena y entrega las compilaciones oficiales para Android en `desca
 
 ## 🔒 Licencia y Autoría
 
+Distribuido bajo la **Licencia MIT**. Consulta el archivo [`LICENSE`](LICENSE) para más detalles.  
 Desarrollado para el ecosistema **SIMC PRO** por **[Jheysmar Mendieta](https://github.com/Jheysmar-Mendieta)**.  
 Todos los derechos reservados © 2026.
