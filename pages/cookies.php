@@ -20,7 +20,7 @@ $baseUrl = get_base_url();
   <meta name="description" content="Política de Cookies de SIMC. Información sobre el uso de cookies técnicas, de sesión y almacenamiento local." />
   
   <!-- Favicons Oficiales de SIMC -->
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
