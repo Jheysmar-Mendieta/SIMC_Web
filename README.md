@@ -109,7 +109,6 @@ SIMC_Web/
 ├── .htaccess                 # Directivas Apache, mod_rewrite y compresión Gzip
 ├── LICENSE                   # Licencia de código abierto MIT
 ├── index.php                 # Enrutador y renderizador del Portal Oficial
-├── generar_pdf.py            # Utilidad complementaria
 ├── admin/                    # SIMC Admin Suite (Panel Administrativo)
 │   ├── dashboard.php         # Controlador principal del panel
 │   ├── css/                  # Hojas de estilo del dashboard

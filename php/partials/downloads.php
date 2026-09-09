@@ -160,6 +160,28 @@
       </a>
     </div>
 
+    <!-- EXE 4: SIMC OMNISENTINEL PROCTORING MULTIMODAL -->
+    <div class="download-card" style="border-color: rgba(0, 242, 254, 0.4); background: linear-gradient(180deg, rgba(0, 242, 254, 0.05) 0%, var(--bg-card) 100%);">
+      <div class="download-meta-badges">
+        <span class="tag-version" style="background: rgba(0, 242, 254, 0.18); color: #00f2fe; border-color: rgba(0, 242, 254, 0.4);">PROCTORING MULTIMODAL</span>
+        <span class="tag-size">Windows PC</span>
+      </div>
+      <div class="card-icon" style="color:#00f2fe;"><i class="fas fa-satellite-dish" aria-hidden="true"></i></div>
+      <h3>SIMC OmniSentinel</h3>
+      <p>Estación multimodal virtual de proctoring. Fusión sensorial: Ojos (YOLOv8 + Mirada), Oídos (Susurros dB), Radar RF (Bluetooth BLE) y Semáforo/Buzzer Virtual.</p>
+      
+      <ul class="card-specs">
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Compatible con <strong>Windows 10 y 11</strong></span></li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Detección de celulares, libros y personas no autorizadas</span></li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Radar Bluetooth BLE y micrófono acústico en dB</span></li>
+      </ul>
+
+      <a href="descargas/SIMC_OmniSentinel.exe?v=<?= time() ?>" class="btn btn-card btn-download" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); color: #040914; font-weight: 700;" download>
+        <i class="fas fa-download" aria-hidden="true"></i>
+        <span>Descargar OmniSentinel (.exe)</span>
+      </a>
+    </div>
+
   </div>
 </div>
 
